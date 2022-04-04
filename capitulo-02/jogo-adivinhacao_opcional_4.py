@@ -5,15 +5,28 @@ NUMERO_SECRETO = 42
 
 
 def main():
-    total_tentativas = 3
+    print('\n')
+    print('\t*******************************')
+    print('\t**     JOGO DA ADVINHAÇÃO    **')
+    print('\t*******************************')
+    print('\n')
+
+    nivel_jogo = int(
+        input(
+            '\t{}\n\t{}\n\t{}\n\t{}\n\t{}'
+            .format(
+                'Escolha o nível do jogo',
+                'Nível 1) 3 Tentativas',
+                'Nível 2) 6 Tentativas',
+                'Nível 3) 9 Tentativas',
+                'Nível: ',
+            )
+        )
+    )
+
+    total_tentativas = nivel_jogo * 3
 
     for numero_da_rodada in range(1, (total_tentativas + 1)):
-        print('\n')
-        print('\t*******************************')
-        print('\t**     JOGO DA ADVINHAÇÃO    **')
-        print('\t*******************************')
-        print('\n')
-
         print('\t-------- RODADA: {} -----------'.format(numero_da_rodada))
         print('\n')
 
